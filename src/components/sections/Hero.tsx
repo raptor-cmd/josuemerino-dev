@@ -10,7 +10,9 @@ import { prefersReducedMotion } from '@/utils/gsap-helpers'
 import josuePhoto from '@/assets/images/josue.webp'
 
 export const Hero = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const cvUrl = i18n.language === 'es' ? '/cv/cv-es.pdf' : '/cv/cv-en.pdf'
+  const cvFileName = i18n.language === 'es' ? 'Josue_Merino_ES_CV.pdf' : 'CV_Josue_Merino_EN.pdf'
   const containerRef = useRef<HTMLElement>(null)
   const nameRef = useRef<HTMLHeadingElement>(null)
   const badgeRef = useRef<HTMLDivElement>(null)
@@ -148,10 +150,15 @@ export const Hero = () => {
               {t('hero.cta_primary')}
               <ArrowDown size={14} className="ml-2 inline" />
             </Button>
-            <Button variant="ghost">
-              <Download size={14} className="mr-2 inline" />
+            <a
+              href={cvUrl}
+              download={cvFileName}
+              className="px-6 py-3 rounded-full font-semibold text-sm tracking-wide border border-[var(--border)] text-[var(--fg)] hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] transition-all duration-200 inline-flex items-center gap-2"
+              aria-label={`${t('hero.cta_secondary')} (${i18n.language.toUpperCase()})`}
+            >
+              <Download size={14} />
               {t('hero.cta_secondary')}
-            </Button>
+            </a>
           </div>
         </div>
 
