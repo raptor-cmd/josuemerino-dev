@@ -1,120 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { lazy, Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/components/layout/Footer'
+import { OWNER } from '@/constants/cv-data'
+
+const Hero = lazy(() => import('@/components/sections/Hero').then((m) => ({ default: m.Hero })))
+const About = lazy(() => import('@/components/sections/About').then((m) => ({ default: m.About })))
+const Services = lazy(() => import('@/components/sections/Services').then((m) => ({ default: m.Services })))
+const Experience = lazy(() => import('@/components/sections/Experience').then((m) => ({ default: m.Experience })))
+const TechStack = lazy(() => import('@/components/sections/TechStack').then((m) => ({ default: m.TechStack })))
+const Contact = lazy(() => import('@/components/sections/Contact').then((m) => ({ default: m.Contact })))
+
+const SectionFallback = () => (
+  <div className="section-padding flex items-center justify-center">
+    <div className="w-8 h-8 rounded-full border-2 border-[var(--accent-cyan)] border-t-transparent animate-spin" />
+  </div>
+)
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <Helmet>
+        <title>{OWNER.shortName} — Full-Stack Developer & AI Engineer</title>
+        <meta
+          name="description"
+          content="Full-Stack Developer with 5+ years of experience specialising in PHP/Laravel, ReactJS/TypeScript, AI/LLM engineering and Computer Vision."
+        />
+        <meta property="og:title" content={`${OWNER.shortName} — Full-Stack Developer`} />
+        <meta property="og:description" content="Building intelligent systems and elegant technical solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://${OWNER.website}`} />
+        <link rel="canonical" href={`https://${OWNER.website}`} />
+      </Helmet>
 
-      <div className="ticks"></div>
+      <Navbar />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <main>
+        <Suspense fallback={<SectionFallback />}><Hero /></Suspense>
+        <Suspense fallback={<SectionFallback />}><About /></Suspense>
+        <Suspense fallback={<SectionFallback />}><Services /></Suspense>
+        <Suspense fallback={<SectionFallback />}><Experience /></Suspense>
+        <Suspense fallback={<SectionFallback />}><TechStack /></Suspense>
+        <Suspense fallback={<SectionFallback />}><Contact /></Suspense>
+      </main>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <Footer />
     </>
   )
 }

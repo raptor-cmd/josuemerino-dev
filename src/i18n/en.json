@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "experience": "Experience",
+    "stack": "Stack",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for work",
+    "cta_primary": "Let's talk",
+    "cta_secondary": "Download CV"
+  },
+  "about": {
+    "label": "// About me",
+    "title": "Bridging Human Logic and Artificial Intelligence.",
+    "bio1": "I'm a self-motivated Full-Stack Developer with a deep commitment to building intelligent systems and elegant technical solutions. With 5+ years of experience spanning backend architecture, AI models, and computer vision, I thrive at the intersection of engineering precision and human-centered design.",
+    "bio2": "In my free time I'm passionate about the intersection of Machine Learning and creative applications. I aim to build truly scalable systems with mathematical precision."
+  },
+  "stats": {
+    "years": "Years of exp.",
+    "companies": "Companies",
+    "countries": "Countries",
+    "techs": "Technologies"
+  },
+  "services": {
+    "label": "// What I build",
+    "title": "Core Competencies",
+    "fullstack": {
+      "title": "Full-Stack Development",
+      "desc": "Robust, type-safe systems and pixel-perfect interfaces built on battle-tested foundations. Clean architecture and seamless user experience."
+    },
+    "ai": {
+      "title": "AI & LLM Engineering",
+      "desc": "Intelligent AI co-pilots using large language models, vector databases, RAG pipelines, and FastAPI services ready for real-world deployment."
+    },
+    "vision": {
+      "title": "Computer Vision",
+      "desc": "Real-time visual intelligence systems for detection, segmentation, and tracking. Built with OpenCV and trained models for industrial applications."
+    },
+    "backend": {
+      "title": "Backend & Infrastructure",
+      "desc": "Reliable server architectures, RESTful APIs, and containerized deployments with Docker. Scalable and maintainable from day one."
+    }
+  },
+  "exp": {
+    "label": "// Where I've worked",
+    "title": "Experience Timeline",
+    "present": "Present",
+    "icloud": {
+      "highlight": "Led the development of two innovative projects: an AI Chatbot (LLM) for compliance standard consultation and a Document Manager with defined roles and permissions."
+    },
+    "siali": {
+      "highlight": "Developed computer vision systems with real-time camera processing for Mercadona and GSK. Responsible for AI training for detection and segmentation, and intuitive web interfaces."
+    },
+    "viacore": {
+      "highlight": "Integrated ReactJS with TypeScript and Material UI to build interactive dashboards for healthcare professionals, and a patient monitoring system using Express.js."
+    },
+    "funiber": {
+      "highlight": "Designed end-to-end architecture (business logic, data models, APIs), managed MySQL databases, and implemented Docker-based deployment with PHP/Laravel."
+    }
+  },
+  "stack": {
+    "label": "// My toolkit",
+    "title": "Tech Stack"
+  },
+  "contact": {
+    "label": "// Got a project?",
+    "title": "Let's create something Extraordinary",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Tell me about your project...",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "copyright": "© 2025 Josué Daniel Merino Pineda",
+    "tagline": "Building for engineering excellence."
+  }
+}

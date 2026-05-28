@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "experience": "Experiencia",
+    "stack": "Stack",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "available": "Disponible para proyectos",
+    "cta_primary": "Hablemos",
+    "cta_secondary": "Descargar CV"
+  },
+  "about": {
+    "label": "// Sobre mí",
+    "title": "Uniendo la Lógica Humana con la Inteligencia Artificial.",
+    "bio1": "Soy un desarrollador Full-Stack con una profunda vocación por construir sistemas inteligentes y soluciones técnicas elegantes. Con más de 5 años de experiencia en arquitectura backend, modelos de IA y visión artificial, trabajo en la intersección entre la ingeniería de precisión y el diseño centrado en el usuario.",
+    "bio2": "En mi tiempo libre me apasiona la intersección entre el Machine Learning y las aplicaciones creativas. Mi objetivo es construir sistemas verdaderamente escalables con precisión matemática."
+  },
+  "stats": {
+    "years": "Años de exp.",
+    "companies": "Empresas",
+    "countries": "Países",
+    "techs": "Tecnologías"
+  },
+  "services": {
+    "label": "// Lo que construyo",
+    "title": "Competencias Principales",
+    "fullstack": {
+      "title": "Desarrollo Full-Stack",
+      "desc": "Sistemas robustos y con tipado seguro, interfaces pixel-perfect sobre bases sólidas. Arquitectura limpia y experiencia de usuario fluida."
+    },
+    "ai": {
+      "title": "Ingeniería AI & LLM",
+      "desc": "Co-pilotos inteligentes usando modelos de lenguaje, bases de datos vectoriales, pipelines RAG y servicios FastAPI listos para producción."
+    },
+    "vision": {
+      "title": "Visión Artificial",
+      "desc": "Sistemas de inteligencia visual en tiempo real para detección, segmentación y seguimiento. Construidos con OpenCV y modelos entrenados para aplicaciones industriales."
+    },
+    "backend": {
+      "title": "Backend e Infraestructura",
+      "desc": "Arquitecturas de servidor fiables, APIs RESTful y despliegues contenerizados con Docker. Escalables y mantenibles desde el primer día."
+    }
+  },
+  "exp": {
+    "label": "// Dónde he trabajado",
+    "title": "Trayectoria Profesional",
+    "present": "Presente",
+    "icloud": {
+      "highlight": "Lideré el desarrollo de dos proyectos innovadores: un AI Chatbot (LLM) para consulta de estándares de cumplimiento y un Gestor de Documentos con roles y permisos definidos."
+    },
+    "siali": {
+      "highlight": "Desarrollé sistemas de visión artificial con procesamiento de cámara en tiempo real para Mercadona y GSK. Responsable del entrenamiento de IA para detección y segmentación, e interfaces web intuitivas."
+    },
+    "viacore": {
+      "highlight": "Integré ReactJS con TypeScript y Material UI para crear dashboards interactivos para profesionales sanitarios y un sistema de monitoreo de pacientes con Express.js."
+    },
+    "funiber": {
+      "highlight": "Diseñé arquitectura end-to-end (lógica de negocio, modelos de datos, APIs), gestioné bases de datos MySQL e implementé despliegue con Docker usando PHP/Laravel."
+    }
+  },
+  "stack": {
+    "label": "// Mi kit de herramientas",
+    "title": "Stack Tecnológico"
+  },
+  "contact": {
+    "label": "// ¿Tienes un proyecto?",
+    "title": "Creemos algo Extraordinario",
+    "name": "Tu nombre",
+    "email": "Tu correo",
+    "message": "Cuéntame sobre tu proyecto...",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado! Me pondré en contacto contigo pronto.",
+    "error": "Algo salió mal. Por favor, inténtalo de nuevo."
+  },
+  "footer": {
+    "copyright": "© 2025 Josué Daniel Merino Pineda",
+    "tagline": "Construyendo hacia la excelencia en ingeniería."
+  }
+}
