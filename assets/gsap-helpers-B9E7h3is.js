@@ -1,1 +1,0 @@
-import{r as e,t}from"./ScrollTrigger-Bw38bDXp.js";e.registerPlugin(t);var n=()=>window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;export{n as t};
