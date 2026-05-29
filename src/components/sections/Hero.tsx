@@ -189,8 +189,8 @@ export const Hero = () => {
               }}
             >
               <span className="text-[var(--accent-cyan)]">const</span>
-              <span className="text-[var(--fg-muted)]"> role </span>
-              <span className="text-[var(--fg)]">= </span>
+              <span className="text-slate-400"> role </span>
+              <span className="text-slate-200">= </span>
               <span className="text-emerald-400">"Engineer"</span>
             </div>
           </div>

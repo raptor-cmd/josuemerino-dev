@@ -1,8 +1,6 @@
 import { lazy, Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
-import { OWNER } from '@/constants/cv-data'
 
 const Hero = lazy(() => import('@/components/sections/Hero').then((m) => ({ default: m.Hero })))
 const About = lazy(() => import('@/components/sections/About').then((m) => ({ default: m.About })))
@@ -20,19 +18,6 @@ const SectionFallback = () => (
 function App() {
   return (
     <>
-      <Helmet>
-        <title>{OWNER.shortName} — Full-Stack Developer & AI Engineer</title>
-        <meta
-          name="description"
-          content="Full-Stack Developer with 5+ years of experience specialising in PHP/Laravel, ReactJS/TypeScript, AI/LLM engineering and Computer Vision."
-        />
-        <meta property="og:title" content={`${OWNER.shortName} — Full-Stack Developer`} />
-        <meta property="og:description" content="Building intelligent systems and elegant technical solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://${OWNER.website}`} />
-        <link rel="canonical" href={`https://${OWNER.website}`} />
-      </Helmet>
-
       <Navbar />
 
       <main>
