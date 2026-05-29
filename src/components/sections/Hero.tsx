@@ -180,7 +180,14 @@ export const Hero = () => {
             </div>
 
             {/* Floating decoration */}
-            <div className="absolute -bottom-4 -left-4 glass-card rounded-xl px-4 py-3 text-xs font-mono">
+            <div
+              className="absolute -bottom-4 -left-4 rounded-xl px-4 py-3 text-xs font-mono"
+              style={{
+                background: 'rgba(8, 12, 24, 0.88)',
+                border: '1px solid rgba(0, 229, 255, 0.25)',
+                backdropFilter: 'blur(8px)',
+              }}
+            >
               <span className="text-[var(--accent-cyan)]">const</span>
               <span className="text-[var(--fg-muted)]"> role </span>
               <span className="text-[var(--fg)]">= </span>
