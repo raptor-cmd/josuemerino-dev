@@ -29,13 +29,15 @@ export const Hero = () => {
 
     const timer = setTimeout(() => {
       if (!isDeleting) {
-        setDisplayText(role.slice(0, displayText.length + 1))
-        if (displayText.length === role.length - 1) {
+        if (displayText.length < role.length) {
+          setDisplayText(role.slice(0, displayText.length + 1))
+        } else {
           setTimeout(() => setIsDeleting(true), 2000)
         }
       } else {
-        setDisplayText(role.slice(0, displayText.length - 1))
-        if (displayText.length === 0) {
+        if (displayText.length > 0) {
+          setDisplayText(role.slice(0, displayText.length - 1))
+        } else {
           setIsDeleting(false)
           setRoleIndex((i) => (i + 1) % OWNER.roles.length)
         }
@@ -90,10 +92,6 @@ export const Hero = () => {
     { scope: containerRef },
   )
 
-  const nameParts = OWNER.name.split(' ')
-  const firstLine = nameParts.slice(0, 2).join('\n')
-  const secondLine = nameParts.slice(2).join(' ')
-
   return (
     <section
       id="hero"
@@ -128,13 +126,14 @@ export const Hero = () => {
             className="font-display font-extrabold leading-[1.05] mb-6 overflow-hidden"
             style={{ fontSize: 'clamp(2.8rem, 7vw, 5.5rem)' }}
           >
-            {[firstLine, secondLine].flatMap((word, wi) =>
-              word.split('').map((char, ci) => (
-                <span key={`${wi}-${ci}`} className="char inline-block" style={{ whiteSpace: char === '\n' ? 'pre' : 'normal' }}>
-                  {char === '\n' ? <br /> : char}
-                </span>
-              ))
-            )}
+            {OWNER.name.split(' ').map((word, wi, arr) => (
+              <span key={wi} className="inline-block whitespace-nowrap">
+                {word.split('').map((char, ci) => (
+                  <span key={`${wi}-${ci}`} className="char inline-block">{char}</span>
+                ))}
+                {wi < arr.length - 1 && <span className="char inline-block">&nbsp;</span>}
+              </span>
+            ))}
           </h1>
 
           <div className="font-mono text-[var(--accent-cyan)] text-lg mb-8 min-h-[1.75rem]">
