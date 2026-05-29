@@ -7,6 +7,7 @@ import { Code2, BrainCircuit, Camera, Server } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { SectionTitle } from '@/components/ui/SectionTitle'
 import { Badge } from '@/components/ui/Badge'
+import { Button } from '@/components/ui/Button'
 import { SERVICES } from '@/constants/cv-data'
 import { prefersReducedMotion } from '@/utils/gsap-helpers'
 
@@ -85,6 +86,19 @@ export const Services = () => {
               </div>
             )
           })}
+        </div>
+
+        {/* CTA block */}
+        <div className="mt-16 flex flex-col items-center gap-6 text-center">
+          <p className="text-[var(--fg)] font-display font-semibold text-xl md:text-2xl max-w-xl">
+            {t('services.cta_question')}
+          </p>
+          <Button
+            variant="primary"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            {t('hero.cta_primary')} &rarr;
+          </Button>
         </div>
       </div>
     </section>

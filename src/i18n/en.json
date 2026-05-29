@@ -14,8 +14,8 @@
   "about": {
     "label": "// About me",
     "title": "Bridging Human Logic and Artificial Intelligence.",
-    "bio1": "I'm a self-motivated Full-Stack Developer with a deep commitment to building intelligent systems and elegant technical solutions. With 5+ years of experience spanning backend architecture, AI models, and computer vision, I thrive at the intersection of engineering precision and human-centered design.",
-    "bio2": "In my free time I'm passionate about the intersection of Machine Learning and creative applications. I aim to build truly scalable systems with mathematical precision."
+    "bio1": "I'm Josué, a software engineer with over 5 years building real systems for real businesses. I've worked on computer vision projects, built AI chatbots for document consultation, and architected web platforms that keep running when they're needed most.",
+    "bio2": "Today I work independently because I believe well-applied technology transforms businesses. I don't sell projects — I build solutions that keep generating value long after I've stepped away."
   },
   "stats": {
     "years": "Years of exp.",
@@ -24,23 +24,24 @@
     "techs": "Technologies"
   },
   "services": {
-    "label": "// What I build",
-    "title": "Core Competencies",
+    "label": "// THE PROBLEM I SOLVE",
+    "title": "Your business is losing money every time technology doesn't work for you.",
+    "cta_question": "Do any of these problems sound familiar?",
     "fullstack": {
-      "title": "Full-Stack Development",
-      "desc": "Robust, type-safe systems and pixel-perfect interfaces built on battle-tested foundations. Clean architecture and seamless user experience."
+      "title": "Your website doesn't convert because it was built to look good, not to sell",
+      "desc": "I build web applications and systems that do the real work: attract clients, manage processes, and scale without breaking. No technical debt, no excuses."
     },
     "ai": {
-      "title": "AI & LLM Engineering",
-      "desc": "Intelligent AI co-pilots using large language models, vector databases, RAG pipelines, and FastAPI services ready for real-world deployment."
+      "title": "Your team loses hours answering questions an AI could solve in seconds",
+      "desc": "I integrate AI into your processes: chatbots that know your business, systems that read and summarise documents, and agents that automate repetitive tasks. Result: your team does what only humans can do."
     },
     "vision": {
-      "title": "Computer Vision",
-      "desc": "Real-time visual intelligence systems for detection, segmentation, and tracking. Built with OpenCV and trained models for industrial applications."
+      "title": "Your AI models don't learn because nobody is training them properly",
+      "desc": "I've worked on real computer vision projects for large companies: model training, data labelling and maintaining systems in production. I know what it takes to make a model work in the real world, not just in a notebook."
     },
     "backend": {
-      "title": "Backend & Infrastructure",
-      "desc": "Reliable server architectures, RESTful APIs, and containerized deployments with Docker. Scalable and maintainable from day one."
+      "title": "Your platform holds up fine \u2014 until suddenly it doesn't",
+      "desc": "Architectures that scale when the business grows, not ones that crash when you need them most. Clean APIs, automated deployments and systems that don't wake you up at 3 AM."
     }
   },
   "exp": {
